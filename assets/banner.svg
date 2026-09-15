@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-labelledby="t d">
+  <title id="t">Field Research</title>
+  <desc id="d">A vessel track reported over AIS goes dark; the search area grows from the last fix, a radar return with no matching AIS appears inside it, and the track resumes. Cooperative and non-cooperative sources fused.</desc>
+  <style>
+    .serif { font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif; }
+    .sans  { font-family: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    .mono  { font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .lane  { stroke-dasharray: 2 6; animation: flow 10s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -80 } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important } }
+  </style>
+
+  <rect width="1200" height="400" fill="#F6F4EF"/>
+  <rect x=".5" y=".5" width="1199" height="399" fill="none" stroke="#DAD6CC"/>
+
+  <!-- text column -->
+  <text x="64" y="82" class="mono" font-size="12" letter-spacing="1.8" fill="#7A8088">DARKANALYTICA</text>
+  <rect x="64" y="108" width="48" height="3" fill="#1F3A5F"/>
+  <text x="62" y="176" class="serif" font-size="46" font-weight="600" fill="#1B1F24">Field Research</text>
+  <text x="64" y="226" class="sans" font-size="19" fill="#4A5058">Short, sourced case studies in counter-UAS, RF,</text>
+  <text x="64" y="252" class="sans" font-size="19" fill="#4A5058">satellite navigation and maritime OSINT.</text>
+  <text x="64" y="330" class="mono" font-size="12" letter-spacing="1.2" fill="#7A8088">OPEN SOURCES  ·  COUNTER-UAS  ·  RF  ·  GNSS  ·  OSINT</text>
+
+  <line x1="680" y1="56" x2="680" y2="344" stroke="#DAD6CC"/>
+
+  <!-- mechanism strip: AIS gap bridged by a non-cooperative return -->
+  <g>
+    <!-- background traffic lanes (baseline) -->
+    <path class="lane" d="M712,120 C820,110 960,90 1168,70" fill="none" stroke="#5B7083" stroke-width="1.5" stroke-opacity=".45"/>
+    <path class="lane" d="M712,320 C860,300 1000,290 1168,250" fill="none" stroke="#5B7083" stroke-width="1.5" stroke-opacity=".45"/>
+
+    <!-- search area growing from last fix -->
+    <circle cx="880" cy="215" r="90" fill="#F6EFDF" fill-opacity=".7" stroke="#B8872B" stroke-width="1.5" stroke-dasharray="5 4">
+      <animate attributeName="r" dur="8s" repeatCount="indefinite" values="6;90;90;6" keyTimes="0;0.7;0.95;1"/>
+    </circle>
+
+    <!-- AIS pings before the gap -->
+    <g fill="#1F3A5F">
+      <circle cx="722" cy="290" r="4"/>
+      <circle cx="762" cy="270" r="4"/>
+      <circle cx="802" cy="252" r="4"/>
+      <circle cx="842" cy="233" r="4"/>
+    </g>
+    <circle cx="880" cy="215" r="6" fill="#fff" stroke="#1F3A5F" stroke-width="2"/>
+
+    <!-- inferred track through the gap -->
+    <path d="M880,215 L938,184 L1010,150" fill="none" stroke="#A33A2B" stroke-width="1.75" stroke-dasharray="4 4">
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.5;0.6;0.95;1"/>
+    </path>
+
+    <!-- radar return with no AIS match -->
+    <g>
+      <rect x="932" y="178" width="12" height="12" fill="#A33A2B"/>
+      <text x="952" y="196" class="mono" font-size="12" fill="#A33A2B">RADAR, NO AIS</text>
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.42;0.46;0.95;1"/>
+    </g>
+
+    <!-- AIS resumes -->
+    <g fill="#1F3A5F">
+      <circle cx="1010" cy="150" r="4"/>
+      <circle cx="1052" cy="132" r="4"/>
+      <circle cx="1094" cy="114" r="4"/>
+      <circle cx="1136" cy="96" r="4"/>
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.7;0.76;0.95;1"/>
+    </g>
+
+    <text x="720" y="312" class="mono" font-size="12" fill="#1F3A5F">AIS</text>
+    <text x="826" y="248" class="mono" font-size="12" fill="#1F3A5F">LAST FIX</text>
+    <text x="966" y="318" class="mono" font-size="12" fill="#B8872B">SEARCH AREA</text>
+    <text x="712" y="352" class="mono" font-size="12" fill="#7A8088">COOPERATIVE  ·  NON-COOPERATIVE  ·  FUSED</text>
+  </g>
+</svg>
