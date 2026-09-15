@@ -2,7 +2,7 @@
   <title id="t">GNSS jamming versus spoofing</title>
   <desc id="d">Left: under jamming the carrier-to-noise density at the receiver falls below the tracking threshold and the fix is lost, which the receiver can see. Right: under spoofing the receiver keeps a fix that looks valid while the reported position drifts away from the true path.</desc>
   <style>
-    .serif { font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif; }
+    .display { font-family: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; letter-spacing: -0.01em; }
     .sans  { font-family: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
     .mono  { font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
     .draw  { stroke-dasharray: 1000; stroke-dashoffset: 0; animation: draw 8s linear infinite; }
@@ -13,49 +13,49 @@
     @keyframes later { 0%, 58% { opacity: 0 } 66%, 100% { opacity: 1 } }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important } }
   </style>
-  <rect width="1200" height="490" fill="#F6F4EF"/>
-  <text x="48" y="52" class="mono" font-size="12" letter-spacing="1.2" fill="#7A8088">NOTE 03  ·  TWO ATTACKS ON SATELLITE NAVIGATION (CONCEPTUAL, NOT TO SCALE)</text>
-  <text x="48" y="94" class="serif" font-size="26" font-weight="600" fill="#1B1F24">Jamming makes the receiver lost; spoofing makes it lied to</text>
+  <rect width="1200" height="490" fill="#F5F7FA"/>
+  <text x="48" y="52" class="mono" font-size="12" letter-spacing="1.2" fill="#6B7688">NOTE 03  ·  TWO ATTACKS ON SATELLITE NAVIGATION (CONCEPTUAL, NOT TO SCALE)</text>
+  <text x="48" y="94" class="display" font-size="26" font-weight="600" fill="#0E1726">Jamming makes the receiver lost; spoofing makes it lied to</text>
 
   <!-- panel A: jamming -->
-  <rect x="48" y="118" width="540" height="344" rx="6" fill="#fff" stroke="#DAD6CC"/>
-  <rect x="48" y="118" width="540" height="3" fill="#1F3A5F"/>
-  <text x="68" y="148" class="mono" font-size="12" letter-spacing="1" fill="#1F3A5F">A  ·  JAMMING = DENIAL</text>
+  <rect x="48" y="118" width="540" height="344" rx="6" fill="#fff" stroke="#D8DEE6"/>
+  <rect x="48" y="118" width="540" height="3" fill="#0B2545"/>
+  <text x="68" y="148" class="mono" font-size="12" letter-spacing="1" fill="#0B2545">A  ·  JAMMING = DENIAL</text>
 
-  <line x1="96" y1="170" x2="96" y2="306" stroke="#DAD6CC" stroke-width="1.5"/>
-  <line x1="96" y1="306" x2="564" y2="306" stroke="#DAD6CC" stroke-width="1.5"/>
-  <text x="104" y="176" class="mono" font-size="12" fill="#7A8088">C/N0</text>
-  <text x="520" y="324" class="mono" font-size="12" fill="#7A8088">time</text>
-  <line x1="96" y1="258" x2="564" y2="258" stroke="#B8872B" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="404" y="252" class="mono" font-size="12" fill="#B8872B">tracking threshold</text>
-  <line x1="300" y1="170" x2="300" y2="306" stroke="#5B7083" stroke-width="1" stroke-dasharray="2 4"/>
-  <text x="308" y="324" class="mono" font-size="12" fill="#5B7083">jammer on</text>
-  <path class="draw" pathLength="1000" d="M96,202 L130,199 L164,204 L198,200 L232,203 L266,199 L300,202 L318,238 L336,280 L370,286 L404,282 L438,288 L472,284 L506,287 L540,283 L564,286" fill="none" stroke="#1F3A5F" stroke-width="2"/>
-  <text class="late mono" x="452" y="276" font-size="12" fill="#A33A2B">LOSS OF LOCK</text>
+  <line x1="96" y1="170" x2="96" y2="306" stroke="#D8DEE6" stroke-width="1.5"/>
+  <line x1="96" y1="306" x2="564" y2="306" stroke="#D8DEE6" stroke-width="1.5"/>
+  <text x="104" y="176" class="mono" font-size="12" fill="#6B7688">C/N0</text>
+  <text x="520" y="324" class="mono" font-size="12" fill="#6B7688">time</text>
+  <line x1="96" y1="258" x2="564" y2="258" stroke="#B7791F" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="404" y="252" class="mono" font-size="12" fill="#875A16">tracking threshold</text>
+  <line x1="300" y1="170" x2="300" y2="306" stroke="#3E5C76" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="308" y="324" class="mono" font-size="12" fill="#3E5C76">jammer on</text>
+  <path class="draw" pathLength="1000" d="M96,202 L130,199 L164,204 L198,200 L232,203 L266,199 L300,202 L318,238 L336,280 L370,286 L404,282 L438,288 L472,284 L506,287 L540,283 L564,286" fill="none" stroke="#0B2545" stroke-width="2"/>
+  <text class="late mono" x="452" y="276" font-size="12" fill="#8A6A1F">LOSS OF LOCK</text>
 
-  <text x="68" y="366" class="mono" font-size="12" letter-spacing="1" fill="#7A8088">DOES THE RECEIVER KNOW?</text>
-  <text x="68" y="390" class="sans" font-size="15" fill="#1B1F24">Yes. The fix is lost, so the system can react.</text>
-  <text x="68" y="422" class="mono" font-size="12" letter-spacing="1" fill="#7A8088">RESILIENCE MEANS</text>
-  <text x="68" y="446" class="sans" font-size="15" fill="#1B1F24">Graceful fallback: inertial, visual, hold or return.</text>
+  <text x="68" y="366" class="mono" font-size="12" letter-spacing="1" fill="#6B7688">DOES THE RECEIVER KNOW?</text>
+  <text x="68" y="390" class="sans" font-size="15" fill="#0E1726">Yes. The fix is lost, so the system can react.</text>
+  <text x="68" y="422" class="mono" font-size="12" letter-spacing="1" fill="#6B7688">RESILIENCE MEANS</text>
+  <text x="68" y="446" class="sans" font-size="15" fill="#0E1726">Graceful fallback: inertial, visual, hold or return.</text>
 
   <!-- panel B: spoofing -->
-  <rect x="612" y="118" width="540" height="344" rx="6" fill="#fff" stroke="#DAD6CC"/>
-  <rect x="612" y="118" width="540" height="3" fill="#A33A2B"/>
-  <text x="632" y="148" class="mono" font-size="12" letter-spacing="1" fill="#A33A2B">B  ·  SPOOFING = DECEPTION</text>
+  <rect x="612" y="118" width="540" height="344" rx="6" fill="#fff" stroke="#D8DEE6"/>
+  <rect x="612" y="118" width="540" height="3" fill="#8A6A1F"/>
+  <text x="632" y="148" class="mono" font-size="12" letter-spacing="1" fill="#8A6A1F">B  ·  SPOOFING = DECEPTION</text>
 
-  <path class="draw" pathLength="1000" d="M652,290 C760,272 900,250 1120,236" fill="none" stroke="#1F3A5F" stroke-width="2"/>
-  <path class="draw" pathLength="1000" d="M652,290 C760,270 880,214 1100,176" fill="none" stroke="#A33A2B" stroke-width="2" stroke-dasharray="1000"/>
-  <circle cx="652" cy="290" r="5" fill="#1F3A5F" stroke="#fff" stroke-width="1.5"/>
-  <text x="652" y="316" class="mono" font-size="12" fill="#5B7083">spoofer captures the receiver</text>
-  <text class="later mono" x="1000" y="258" font-size="12" fill="#1F3A5F">true path</text>
-  <text class="later mono" x="940" y="176" font-size="12" fill="#A33A2B">reported fix</text>
+  <path class="draw" pathLength="1000" d="M652,290 C760,272 900,250 1120,236" fill="none" stroke="#0B2545" stroke-width="2"/>
+  <path class="draw" pathLength="1000" d="M652,290 C760,270 880,214 1100,176" fill="none" stroke="#8A6A1F" stroke-width="2" stroke-dasharray="1000"/>
+  <circle cx="652" cy="290" r="5" fill="#0B2545" stroke="#fff" stroke-width="1.5"/>
+  <text x="652" y="316" class="mono" font-size="12" fill="#3E5C76">spoofer captures the receiver</text>
+  <text class="later mono" x="1000" y="258" font-size="12" fill="#0B2545">true path</text>
+  <text class="later mono" x="940" y="176" font-size="12" fill="#8A6A1F">reported fix</text>
   <g class="later">
-    <line x1="1110" y1="182" x2="1118" y2="230" stroke="#B8872B" stroke-width="1.5" stroke-dasharray="3 3"/>
-    <text x="1016" y="212" class="mono" font-size="12" fill="#B8872B">error grows</text>
+    <line x1="1110" y1="182" x2="1118" y2="230" stroke="#B7791F" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text x="1016" y="212" class="mono" font-size="12" fill="#875A16">error grows</text>
   </g>
 
-  <text x="632" y="366" class="mono" font-size="12" letter-spacing="1" fill="#7A8088">DOES THE RECEIVER KNOW?</text>
-  <text x="632" y="390" class="sans" font-size="15" fill="#1B1F24">Usually not. The fix still looks valid.</text>
-  <text x="632" y="422" class="mono" font-size="12" letter-spacing="1" fill="#7A8088">RESILIENCE MEANS</text>
-  <text x="632" y="446" class="sans" font-size="15" fill="#1B1F24">Detection and cross-checks: CRPA, INS, vision.</text>
+  <text x="632" y="366" class="mono" font-size="12" letter-spacing="1" fill="#6B7688">DOES THE RECEIVER KNOW?</text>
+  <text x="632" y="390" class="sans" font-size="15" fill="#0E1726">Usually not. The fix still looks valid.</text>
+  <text x="632" y="422" class="mono" font-size="12" letter-spacing="1" fill="#6B7688">RESILIENCE MEANS</text>
+  <text x="632" y="446" class="sans" font-size="15" fill="#0E1726">Detection and cross-checks: CRPA, INS, vision.</text>
 </svg>

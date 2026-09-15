@@ -2,7 +2,7 @@
   <title id="t">Fusing AIS with non-cooperative layers</title>
   <desc id="d">A vessel's AIS track stops at a last known fix. The possible area grows with elapsed time. A radar or optical return with no matching AIS inside that area is the lead; the track later resumes. Steps: baseline, drop-out, bound the gap, cross-check, check identity.</desc>
   <style>
-    .serif { font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif; }
+    .display { font-family: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; letter-spacing: -0.01em; }
     .sans  { font-family: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
     .mono  { font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
     .lane  { stroke-dasharray: 2 7; animation: flow 10s linear infinite; }
@@ -17,65 +17,65 @@
     @keyframes s5 { 0%, 68% { opacity: 0 } 70%, 98% { opacity: 1 } 100% { opacity: 0 } }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important } .s1, .s2, .s3, .s4, .s5 { opacity: 0 } }
   </style>
-  <rect width="1200" height="470" fill="#F6F4EF"/>
-  <text x="48" y="52" class="mono" font-size="12" letter-spacing="1.2" fill="#7A8088">NOTE 04  ·  FUSING A COOPERATIVE LAYER WITH NON-COOPERATIVE ONES (ILLUSTRATIVE GEOMETRY)</text>
-  <text x="48" y="94" class="serif" font-size="26" font-weight="600" fill="#1B1F24">The gap is a lead: bound it, then look for a return with no AIS</text>
+  <rect width="1200" height="470" fill="#F5F7FA"/>
+  <text x="48" y="52" class="mono" font-size="12" letter-spacing="1.2" fill="#6B7688">NOTE 04  ·  FUSING A COOPERATIVE LAYER WITH NON-COOPERATIVE ONES (ILLUSTRATIVE GEOMETRY)</text>
+  <text x="48" y="94" class="display" font-size="26" font-weight="600" fill="#0E1726">The gap is a lead: bound it, then look for a return with no AIS</text>
 
   <!-- map -->
-  <rect x="48" y="118" width="720" height="300" rx="6" fill="#fff" stroke="#DAD6CC"/>
-  <path d="M48.5,170 C140,160 200,128 290,118.5 L48.5,118.5 Z" fill="#EDF0F3" stroke="#DAD6CC"/>
-  <text x="64" y="142" class="mono" font-size="12" fill="#7A8088">COAST</text>
-  <path class="lane" d="M60,250 C260,230 500,200 756,160" fill="none" stroke="#5B7083" stroke-width="1.5" stroke-opacity=".5"/>
-  <path class="lane" d="M60,396 C300,380 520,360 756,330" fill="none" stroke="#5B7083" stroke-width="1.5" stroke-opacity=".5"/>
-  <text x="600" y="330" class="mono" font-size="12" fill="#7A8088">baseline traffic</text>
+  <rect x="48" y="118" width="720" height="300" rx="6" fill="#fff" stroke="#D8DEE6"/>
+  <path d="M48.5,170 C140,160 200,128 290,118.5 L48.5,118.5 Z" fill="#EEF2F5" stroke="#D8DEE6"/>
+  <text x="64" y="142" class="mono" font-size="12" fill="#6B7688">COAST</text>
+  <path class="lane" d="M60,250 C260,230 500,200 756,160" fill="none" stroke="#3E5C76" stroke-width="1.5" stroke-opacity=".5"/>
+  <path class="lane" d="M60,396 C300,380 520,360 756,330" fill="none" stroke="#3E5C76" stroke-width="1.5" stroke-opacity=".5"/>
+  <text x="600" y="330" class="mono" font-size="12" fill="#6B7688">baseline traffic</text>
 
   <clipPath id="mapClip"><rect x="48" y="118" width="720" height="300" rx="6"/></clipPath>
   <g clip-path="url(#mapClip)">
-    <circle cx="330" cy="300" r="150" fill="#F6EFDF" fill-opacity=".7" stroke="#B8872B" stroke-width="1.5" stroke-dasharray="5 4">
+    <circle cx="330" cy="300" r="150" fill="#F4EFE2" fill-opacity=".7" stroke="#B7791F" stroke-width="1.5" stroke-dasharray="5 4">
       <animate attributeName="r" dur="10s" repeatCount="indefinite" values="6;6;150;150;6" keyTimes="0;0.28;0.62;0.97;1"/>
     </circle>
   </g>
 
-  <g fill="#1F3A5F">
+  <g fill="#0B2545">
     <circle cx="90" cy="392" r="4.5"/><circle cx="150" cy="370" r="4.5"/>
     <circle cx="210" cy="347" r="4.5"/><circle cx="270" cy="323" r="4.5"/>
   </g>
-  <circle cx="330" cy="300" r="7" fill="#fff" stroke="#1F3A5F" stroke-width="2"/>
-  <text x="300" y="330" class="mono" font-size="12" fill="#1F3A5F">LAST FIX</text>
-  <text x="96" y="410" class="mono" font-size="12" fill="#1F3A5F">AIS track</text>
-  <text x="392" y="410" class="mono" font-size="12" fill="#B8872B">radius ≈ max speed × time dark</text>
+  <circle cx="330" cy="300" r="7" fill="#fff" stroke="#0B2545" stroke-width="2"/>
+  <text x="300" y="330" class="mono" font-size="12" fill="#0B2545">LAST FIX</text>
+  <text x="96" y="410" class="mono" font-size="12" fill="#0B2545">AIS track</text>
+  <text x="392" y="410" class="mono" font-size="12" fill="#875A16">radius ≈ max speed × time dark</text>
 
-  <path d="M330,300 L430,244 L560,196" fill="none" stroke="#A33A2B" stroke-width="1.75" stroke-dasharray="4 4">
+  <path d="M330,300 L430,244 L560,196" fill="none" stroke="#8A6A1F" stroke-width="1.75" stroke-dasharray="4 4">
     <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.55;0.62;0.97;1"/>
   </path>
   <g>
-    <rect x="423" y="237" width="14" height="14" fill="#A33A2B"/>
-    <text x="446" y="252" class="mono" font-size="12" fill="#A33A2B">SAR / optical return, no AIS match</text>
+    <rect x="423" y="237" width="14" height="14" fill="#8A6A1F"/>
+    <text x="446" y="252" class="mono" font-size="12" fill="#8A6A1F">SAR / optical return, no AIS match</text>
     <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.45;0.48;0.97;1"/>
   </g>
   <g>
-    <g fill="#1F3A5F">
+    <g fill="#0B2545">
       <circle cx="560" cy="196" r="4.5"/><circle cx="620" cy="175" r="4.5"/>
       <circle cx="680" cy="154" r="4.5"/><circle cx="740" cy="133" r="4.5"/>
     </g>
-    <text x="600" y="210" class="mono" font-size="12" fill="#1F3A5F">AIS resumes</text>
+    <text x="600" y="210" class="mono" font-size="12" fill="#0B2545">AIS resumes</text>
     <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.7;0.74;0.97;1"/>
   </g>
 
   <!-- method steps -->
   <g class="mono" font-size="12" letter-spacing="1">
-    <rect class="s1" x="800" y="118" width="352" height="54" rx="4" fill="#E8EDF3"/>
-    <rect class="s2" x="800" y="180" width="352" height="54" rx="4" fill="#E8EDF3"/>
-    <rect class="s3" x="800" y="242" width="352" height="54" rx="4" fill="#F6EFDF"/>
-    <rect class="s4" x="800" y="304" width="352" height="54" rx="4" fill="#F6E9E6"/>
-    <rect class="s5" x="800" y="366" width="352" height="54" rx="4" fill="#E8EDF3"/>
-    <text x="816" y="140" fill="#1F3A5F">01  BASELINE</text>
-    <text x="816" y="202" fill="#1F3A5F">02  DROP-OUT</text>
-    <text x="816" y="264" fill="#1F3A5F">03  BOUND THE GAP</text>
-    <text x="816" y="326" fill="#A33A2B">04  CROSS-CHECK</text>
-    <text x="816" y="388" fill="#1F3A5F">05  CHECK IDENTITY</text>
+    <rect class="s1" x="800" y="118" width="352" height="54" rx="4" fill="#EDF1F6"/>
+    <rect class="s2" x="800" y="180" width="352" height="54" rx="4" fill="#EDF1F6"/>
+    <rect class="s3" x="800" y="242" width="352" height="54" rx="4" fill="#F4EFE2"/>
+    <rect class="s4" x="800" y="304" width="352" height="54" rx="4" fill="#F4EFE2"/>
+    <rect class="s5" x="800" y="366" width="352" height="54" rx="4" fill="#EDF1F6"/>
+    <text x="816" y="140" fill="#0B2545">01  BASELINE</text>
+    <text x="816" y="202" fill="#0B2545">02  DROP-OUT</text>
+    <text x="816" y="264" fill="#0B2545">03  BOUND THE GAP</text>
+    <text x="816" y="326" fill="#8A6A1F">04  CROSS-CHECK</text>
+    <text x="816" y="388" fill="#0B2545">05  CHECK IDENTITY</text>
   </g>
-  <g class="sans" font-size="14" fill="#1B1F24">
+  <g class="sans" font-size="14" fill="#0E1726">
     <text x="816" y="161">normal routes for the area and season</text>
     <text x="816" y="223">last position, course and speed</text>
     <text x="816" y="285">the possible area grows with time</text>
@@ -83,5 +83,5 @@
     <text x="816" y="409">duplicate MMSI, impossible speed</text>
   </g>
 
-  <text x="48" y="450" class="sans" font-size="14" fill="#4A5058">A gap is a lead, not proof: reception gaps and lawful switch-off (for example under piracy threat) are common.</text>
+  <text x="48" y="450" class="sans" font-size="14" fill="#3D4A5C">A gap is a lead, not proof: reception gaps and lawful switch-off (for example under piracy threat) are common.</text>
 </svg>
