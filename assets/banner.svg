@@ -13,7 +13,6 @@
   <rect width="1200" height="400" fill="#F5F7FA"/>
   <rect x=".5" y=".5" width="1199" height="399" fill="none" stroke="#D8DEE6"/>
 
-  <!-- text column -->
   <text x="64" y="82" class="mono" font-size="12" letter-spacing="1.8" fill="#5F6B7C">DARKANALYTICA</text>
   <rect x="64" y="108" width="48" height="3" fill="#0B2545"/>
   <text x="62" y="176" class="display" font-size="46" font-weight="600" fill="#0E1726">Field Research</text>
@@ -23,18 +22,14 @@
 
   <line x1="680" y1="56" x2="680" y2="344" stroke="#D8DEE6"/>
 
-  <!-- mechanism strip: AIS gap bridged by a non-cooperative return -->
   <g>
-    <!-- background traffic lanes (baseline) -->
     <path class="lane" d="M712,120 C820,110 960,90 1168,70" fill="none" stroke="#3E5C76" stroke-width="1.5" stroke-opacity=".45"/>
     <path class="lane" d="M712,320 C860,300 1000,290 1168,250" fill="none" stroke="#3E5C76" stroke-width="1.5" stroke-opacity=".45"/>
 
-    <!-- search area growing from last fix -->
     <circle cx="880" cy="215" r="90" fill="#F4EFE2" fill-opacity=".7" stroke="#B7791F" stroke-width="1.5" stroke-dasharray="5 4">
       <animate attributeName="r" dur="8s" repeatCount="indefinite" values="6;90;90;6" keyTimes="0;0.7;0.95;1"/>
     </circle>
 
-    <!-- AIS pings before the gap -->
     <g fill="#0B2545">
       <circle cx="722" cy="290" r="4"/>
       <circle cx="762" cy="270" r="4"/>
@@ -43,19 +38,16 @@
     </g>
     <circle cx="880" cy="215" r="6" fill="#fff" stroke="#0B2545" stroke-width="2"/>
 
-    <!-- inferred track through the gap -->
     <path d="M880,215 L938,184 L1010,150" fill="none" stroke="#8A6A1F" stroke-width="1.75" stroke-dasharray="4 4">
       <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.5;0.6;0.95;1"/>
     </path>
 
-    <!-- radar return with no AIS match -->
     <g>
       <rect x="932" y="178" width="12" height="12" fill="#8A6A1F"/>
       <text x="952" y="196" class="mono" font-size="12" fill="#8A6A1F">RADAR, NO AIS</text>
       <animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.42;0.46;0.95;1"/>
     </g>
 
-    <!-- AIS resumes -->
     <g fill="#0B2545">
       <circle cx="1010" cy="150" r="4"/>
       <circle cx="1052" cy="132" r="4"/>

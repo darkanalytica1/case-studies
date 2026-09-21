@@ -17,7 +17,6 @@
   <text x="48" y="52" class="mono" font-size="12" letter-spacing="1.2" fill="#5F6B7C">NOTE 03  ·  TWO ATTACKS ON SATELLITE NAVIGATION (CONCEPTUAL, NOT TO SCALE)</text>
   <text x="48" y="94" class="display" font-size="26" font-weight="600" fill="#0E1726">Jamming makes the receiver lost; spoofing makes it lied to</text>
 
-  <!-- panel A: jamming -->
   <rect x="48" y="118" width="540" height="344" rx="6" fill="#fff" stroke="#D8DEE6"/>
   <rect x="48" y="118" width="540" height="3" fill="#0B2545"/>
   <text x="68" y="148" class="mono" font-size="12" letter-spacing="1" fill="#0B2545">A  ·  JAMMING = DENIAL</text>
@@ -38,7 +37,6 @@
   <text x="68" y="422" class="mono" font-size="12" letter-spacing="1" fill="#5F6B7C">RESILIENCE MEANS</text>
   <text x="68" y="446" class="sans" font-size="15" fill="#0E1726">Graceful fallback: inertial, visual, hold or return.</text>
 
-  <!-- panel B: spoofing -->
   <rect x="612" y="118" width="540" height="344" rx="6" fill="#fff" stroke="#D8DEE6"/>
   <rect x="612" y="118" width="540" height="3" fill="#8A6A1F"/>
   <text x="632" y="148" class="mono" font-size="12" letter-spacing="1" fill="#8A6A1F">B  ·  SPOOFING = DECEPTION</text>

@@ -19,7 +19,6 @@
   <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#3E5C76" stroke-width="1.6"/></marker></defs>
 
   <g transform="translate(0 30)">
-  <!-- loop stages -->
   <g class="sans" font-size="15" fill="#0E1726">
     <rect x="48"  y="128" width="230" height="70" rx="4" fill="#FFFFFF" stroke="#0B2545" stroke-width="1.5"/>
     <text x="163" y="158" text-anchor="middle" font-weight="600">Observer drone</text>
@@ -42,7 +41,6 @@
   </g>
   <text x="598" y="104" text-anchor="middle" class="mono" font-size="11" fill="#5F6B7C">observer confirms the effect, loop repeats</text>
 
-  <!-- defender actions -->
   <g class="sans" font-size="13" fill="#0E1726">
     <rect x="48"  y="232" width="230" height="56" rx="4" fill="#E9F2F2" stroke="#2F6F73" stroke-width="1.5"/>
     <text x="163" y="256" text-anchor="middle" font-weight="600">Detect and track</text>
@@ -62,7 +60,6 @@
     <line x1="743" y1="198" x2="743" y2="230"/><line x1="1033" y1="198" x2="1033" y2="230"/>
   </g>
 
-  <!-- timeline -->
   <text x="48" y="336" class="mono" font-size="12" letter-spacing="1" fill="#5F6B7C">THE CLOCK (ILLUSTRATIVE, NO REAL VALUES)</text>
   <text x="48" y="370" class="sans" font-size="13" fill="#3D4A5C">Adversary: observe → engage</text>
   <rect x="300" y="356" width="760" height="20" rx="3" fill="#EDF1F6" stroke="#0B2545" stroke-width="1.2"/>
