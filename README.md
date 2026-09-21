@@ -6,11 +6,11 @@
 
 ## What this is
 
-Four short, original case studies in counter-drone defence, radio engineering, satellite-navigation security and maritime open-source intelligence. Each note takes one question, reads what the public sources actually say, and turns it into a plain-language assessment with its limits stated. They are independent research notes written only from open, cited sources.
+Five short, original case studies in counter-drone defence, radio engineering, satellite-navigation security and maritime open-source intelligence. Each note takes one question, reads what the public sources actually say, and turns it into a plain-language assessment with its limits stated. They are independent research notes written only from open, cited sources.
 
 ## Why it matters
 
-The same analytical habit runs through all four: no single sensor or source is enough, and the object worth attention is the one that does not agree with itself. A jammer without detection, a band read without context, a satellite fix nobody cross-checks, an AIS picture taken at face value; each is a decision made on one layer. These notes show how to reason across layers, which is the everyday work of anyone buying, building or operating sensing systems.
+The same analytical habit runs through all five: no single sensor or source is enough, and the object worth attention is the one that does not agree with itself. A jammer without detection, a band read without context, a satellite fix nobody cross-checks, an AIS picture taken at face value; each is a decision made on one layer. These notes show how to reason across layers, which is the everyday work of anyone buying, building or operating sensing systems.
 
 <p align="center">
   <img src="assets/diagrams/ais-dark-gap.svg" alt="An AIS track stops at a last fix; the possible area grows with time; a radar or optical return with no matching AIS inside it is the lead" width="900">
@@ -24,6 +24,7 @@ The same analytical habit runs through all four: no single sensor or source is e
 | 02 | [Frequency is destiny: reading a drone from its control band](02-rf-control-band.md) | RF engineering | Table of bands |
 | 03 | [Attacking navigation: GNSS jamming versus spoofing](03-gnss-jamming-vs-spoofing.md) | Security | [Jamming versus spoofing](assets/diagrams/gnss-jamming-vs-spoofing.svg) |
 | 04 | [Finding the ship running dark: fusing AIS with other open signals](04-osint-ais-dark-vessel.md) | OSINT / maritime | [AIS dark-gap fusion](assets/diagrams/ais-dark-gap.svg) |
+| 05 | [Reading an adversary's drone textbook: defend the loop's clock, not the airframe](05-reading-adversary-drone-doctrine.md) | Counter-UAS / doctrine | [The reconnaissance-fire loop](assets/diagrams/recon-fire-loop.svg) |
 
 ## Method
 
@@ -45,7 +46,7 @@ One idea per note, no unsourced figures, no hype.
 
 ## Sources policy
 
-Only public, openly published material is used: government and intergovernmental publications cleared for release (for example the JIATF-401 C-sUAS Quick Reference Guide, ITU and IMO instruments), public technical specifications, and standard engineering texts. Each note lists its sources at the end. No proprietary, classified, client or employer material is used or implied.
+Only public, openly published material is used: government and intergovernmental publications cleared for release (for example the JIATF-401 C-sUAS Quick Reference Guide, ITU and IMO instruments), public technical specifications, standard engineering texts, and commercially published books, which are summarised in paraphrase rather than reproduced. Each note lists its sources at the end. No proprietary, classified, client or employer material is used or implied.
 
 ## License
 
